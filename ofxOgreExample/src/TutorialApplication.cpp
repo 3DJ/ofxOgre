@@ -4,14 +4,14 @@ Filename:    TutorialApplication.cpp
 -----------------------------------------------------------------------------
 
 This source file is part of the
-   ___                 __    __ _ _    _ 
-  /___\__ _ _ __ ___  / / /\ \ (_) | _(_)
- //  // _` | '__/ _ \ \ \/  \/ / | |/ / |
+___                 __    __ _ _    _ 
+/___\__ _ _ __ ___  / / /\ \ (_) | _(_)
+//  // _` | '__/ _ \ \ \/  \/ / | |/ / |
 / \_// (_| | | |  __/  \  /\  /| |   <| |
 \___/ \__, |_|  \___|   \/  \/ |_|_|\_\_|
-      |___/                              
-      Tutorial Framework
-      http://www.ogre3d.org/tikiwiki/
+|___/                              
+Tutorial Framework
+http://www.ogre3d.org/tikiwiki/
 -----------------------------------------------------------------------------
 */
 #include "TutorialApplication.h"
@@ -19,12 +19,41 @@ This source file is part of the
 //-------------------------------------------------------------------------------------
 TutorialApplication::TutorialApplication(void)
 {
+    m_datapool = &DataPool::CDataPool::getInstance();
 }
 //-------------------------------------------------------------------------------------
 TutorialApplication::~TutorialApplication(void)
 {
 }
-
+void TutorialApplication::eventLoop()
+{
+    ofSleepMillis(5000);
+    Ogre::PolygonMode pm;
+    void *temp = 0;
+    
+    while(1){
+        m_datapool->getRefByName("pm", temp);
+        if (temp != 0)
+        {            
+            string *str = (string *)temp;
+            //cout<<"string"<<*str<<endl;
+            if ( *str == "Wireframe" )
+            {
+                pm = Ogre::PM_WIREFRAME;
+                //cout<<"changing to WireFrame"<<endl;
+            }else if ( *str == "Points")
+            {
+                pm = Ogre::PM_POINTS;
+                //cout<<"changing to Points"<<endl;
+            }else{
+                pm = Ogre::PM_SOLID;
+                //cout<<"changing to Solid"<<endl;
+            }
+            mCamera->setPolygonMode(pm);
+            mDetailsPanel->setParamValue(10, *str);
+        }       
+    }
+}
 //-------------------------------------------------------------------------------------
 void TutorialApplication::createScene(void)
 {
@@ -34,7 +63,9 @@ void TutorialApplication::createScene(void)
     headNode->attachObject(ogreHead);
     Ogre::Light* light = mSceneMgr->createLight( "MainLight" );
     light->setPosition(20, 80, 50);
-    // create your scene here :)
+    // create your scene here :)    
+    cout<<"start event loop"<<endl<<endl<<endl;
+    startThread();
 }
 
 
@@ -46,15 +77,15 @@ void TutorialApplication::createScene(void)
 
 int ogreMain()
 {
-        // Create application object
-        TutorialApplication app;
-        try {
-            app.go();
-        } catch( Ogre::Exception& e ) {
-            std::cerr << "An exception has occured: " <<
-                e.getFullDescription().c_str() << std::endl;
-        }
+    // Create application object
+    TutorialApplication app;
+    try {
+        app.go();
+    } catch( Ogre::Exception& e ) {
+        std::cerr << "An exception has occured: " <<
+            e.getFullDescription().c_str() << std::endl;
+    }
 
-        return 0;
+    return 0;
 }
 

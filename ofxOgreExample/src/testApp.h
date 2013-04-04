@@ -1,6 +1,9 @@
 #pragma once
 
 #include "ofMain.h"
+#include "DataPool.h"
+#include "ofxOpenNI.h"
+using namespace DataPool;
 
 class testApp : public ofBaseApp{
 	public:
@@ -17,4 +20,7 @@ class testApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
+
+        ofxOpenNI openNIDevice;
+        CDataPool * m_datapool;
 };
