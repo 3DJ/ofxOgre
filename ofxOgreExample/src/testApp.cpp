@@ -18,6 +18,8 @@ class MyThread : public ofThread {
 //--------------------------------------------------------------
 void testApp::setup(){
     m_datapool = &CDataPool::getInstance();
+    SEntity entity = {0};   
+    m_datapool->createEntity("pm", entity);
     // create object
     MyThread *thread = new MyThread;
     //ogreMain();
@@ -48,7 +50,7 @@ void testApp::update(){
 void testApp::draw(){
 
     string msg = "Num of Users Tracked: " + ofToString(openNIDevice.getNumTrackedUsers());
-    static string m_pm;
+    static string pm;
     int numUsers = openNIDevice.getNumTrackedUsers();
     if (numUsers) {
         for (int i = 0; i < numUsers; i++) {
@@ -57,17 +59,31 @@ void testApp::draw(){
                 //Get Left and right hand posisitons
                 ofPoint rhp = openNIDevice.getTrackedUser(i).getJoint(JOINT_RIGHT_HAND).getWorldPosition();                
                 //cout<< "x:" << rhp.x << endl;
-                if ( rhp.x < -100)
-                {
-                    m_pm = "Wireframe";
-                    m_datapool->createRef("pm", (void *)&m_pm);
-                }else if ( rhp.x > 100)
-                {
-                    m_pm = "Points";
-                    m_datapool->createRef("pm", (void *)&m_pm);
+                if ( rhp.x < -100){                    
+                    if ( pm == "Wireframe")
+                    {
+                        break;
+                    }              
+                    cout << "changing to Wireframe"<<endl;
+                    pm = "Wireframe";
+                    m_datapool->setValue("pm", pm);
+                }else if ( rhp.x > 100){                    
+                    if ( pm == "Points")
+                    {
+                        break;
+                    }
+                    cout << "changing to Points"<<endl;
+                    pm = "Points";
+                    m_datapool->setValue("pm", pm);
                 }else{
-                    m_pm = "Solid";
-                    m_datapool->createRef("pm", (void *)&m_pm);
+                    //cout << "changing to Solid"<<endl;
+                    if ( pm == "Solid")
+                    {
+                        break;
+                    }
+                    
+                    pm = "Solid";
+                    m_datapool->setValue("pm", pm);
                 }                              
             }
         }
