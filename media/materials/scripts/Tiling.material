@@ -1,19 +1,8 @@
-fragment_program Ogre/Compositor/Tiling_Cg_FP cg
+fragment_program Ogre/Compositor/TilingFP cg
 {
 	source TilingFP.cg
 	entry_point Tiling_ps
-	profiles ps_4_0 ps_2_0 arbfp1
-}
-
-fragment_program Ogre/Compositor/Tiling_GLSLES_FP glsles
-{
-	source TilingFP.glsles
-}
-
-fragment_program Ogre/Compositor/TilingFP unified
-{
-    delegate Ogre/Compositor/Tiling_GLSLES_FP
-    delegate Ogre/Compositor/Tiling_Cg_FP
+	profiles ps_2_0 arbfp1
 }
 
 material Ogre/Compositor/Tiling
@@ -35,7 +24,7 @@ material Ogre/Compositor/Tiling
 			fragment_program_ref Ogre/Compositor/TilingFP
 			{
 				param_named NumTiles float 75.0
-				param_named Threshold float 0.15
+				param_named Threshhold float 0.15
 			}
 
 			texture_unit RT

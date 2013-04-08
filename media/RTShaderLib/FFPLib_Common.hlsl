@@ -4,7 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org
 
-Copyright (c) 2000-2012 Torus Knot Software Ltd
+Copyright (c) 2000-2011 Torus Knot Software Ltd
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -29,9 +29,18 @@ THE SOFTWARE.
 // Program Name: FFPLib_Common
 // Program Desc: Common functions of the FFP.
 // Program Type: Vertex/Pixel shader
-// Language: HLSL
+// Language: CG
 // Notes: Common functions needed by all FFP implementation classes.
 //-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+void FFP_Assign(in unsigned int iColor_0, out float4 oColor_0)
+{
+	oColor_0.w = ((iColor_0 >> 24) & 0xFF) / 255.0f;
+	oColor_0.x = ((iColor_0 >> 16) & 0xFF) / 255.0f;
+	oColor_0.y = ((iColor_0 >> 8) & 0xFF) / 255.0f;
+	oColor_0.z = (iColor_0 & 0xFF) / 255.0f;
+
+}
 //-----------------------------------------------------------------------------
 void FFP_Assign(in float vIn, out float vOut)
 {

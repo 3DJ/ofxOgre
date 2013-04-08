@@ -5,7 +5,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org
 
-Copyright (c) 2000-2012 Torus Knot Software Ltd
+Copyright (c) 2000-2011 Torus Knot Software Ltd
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -34,9 +34,9 @@ THE SOFTWARE.
 // Notes: Implements core functions for FFPTexturing class.
 // based on texturing operations needed by render system.
 // Implements texture coordinate processing:
-// see http://msdn.microsoft.com/en-us/library/bb206247.aspx
+// see http://msdn.microsoft.com/en-us/library/ee422494.aspx
 // Implements texture blending operation:
-// see http://msdn.microsoft.com/en-us/library/bb206241.aspx
+// see http://msdn.microsoft.com/en-us/library/ee422488.aspx
 //-----------------------------------------------------------------------------
 
 

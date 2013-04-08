@@ -10,14 +10,14 @@ OF_ROOT = ../../..
 # for example search paths like:
 # USER_CFLAGS = -I src/objects
 
-USER_CFLAGS = -I ../../../addons/ofxOpenNI/src/ofxOpenNI/include  -I ../../../addons/ofxOpenNI/src/ofxOpenNI/include/libusb -I ../../../addons/ofxOpenNI/src/ofxOpenNI/include/openni -I ../../../addons/ofxOpenNI/src/ofxOpenNI/include/nite -I /usr/include/ni -I /usr/lib/x86_64-linux-gnu
+USER_CFLAGS = -I ../../../addons/ofxOpenNI/src/ofxOpenNI/include  -I ../../../addons/ofxOpenNI/src/ofxOpenNI/include/libusb -I ../../../addons/ofxOpenNI/src/ofxOpenNI/include/openni -I ../../../addons/ofxOpenNI/src/ofxOpenNI/include/nite -I /usr/include/ni -I /usr/lib/x86_64-linux-gnu -I /usr/include/GL -I /usr/include/OGRE -I /usr/local/include/OIS
 
 # USER_LDFLAGS allows to pass custom flags to the linker
 # for example libraries like:
 # USER_LDFLAGS = libs/libawesomelib.a
 
 USER_LDFLAGS =
-USER_LIBS = -lusb-1.0 -lOpenNI -lrt
+USER_LIBS = -lusb-1.0 -lOpenNI -lrt -lOgreMain -lGL -lOIS
 
 EXCLUDE_FROM_SOURCE="bin,.xcodeproj,obj"
 
