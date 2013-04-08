@@ -6,7 +6,7 @@
 
 class MyThread : public ofThread {
     // the thread function
-    void threadedFunction() {
+    void MyThread::threadedFunction() {
 
         // start
         ogreMain();

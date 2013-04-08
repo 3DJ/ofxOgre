@@ -29,17 +29,19 @@ void TutorialApplication::eventLoop()
 {
     ofSleepMillis(5000);
     Ogre::PolygonMode pm;
-    string val;
+    void *temp = 0;
     
     while(1){
-        if ( m_datapool->getValueByName("pm", val) )
+        m_datapool->getRefByName("pm", temp);
+        if (temp != 0)
         {            
+            string *str = (string *)temp;
             //cout<<"string"<<*str<<endl;
-            if ( val == "Wireframe" )
+            if ( *str == "Wireframe" )
             {
                 pm = Ogre::PM_WIREFRAME;
                 //cout<<"changing to WireFrame"<<endl;
-            }else if ( val == "Points")
+            }else if ( *str == "Points")
             {
                 pm = Ogre::PM_POINTS;
                 //cout<<"changing to Points"<<endl;
@@ -48,7 +50,7 @@ void TutorialApplication::eventLoop()
                 //cout<<"changing to Solid"<<endl;
             }
             mCamera->setPolygonMode(pm);
-            mDetailsPanel->setParamValue(10, val);
+            mDetailsPanel->setParamValue(10, *str);
         }       
     }
 }
