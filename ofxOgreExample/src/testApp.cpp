@@ -1,78 +1,26 @@
 #include "testApp.h"
-#undef PI
-#undef TWO_PI
-#undef HALF_PI
+
 #include "TutorialApplication.h"
-
-class MyThread : public ofThread {
-    // the thread function
-    void threadedFunction() {
-
-        // start
-        ogreMain();
-        // done
-    }
-
-};
 
 //--------------------------------------------------------------
 void testApp::setup(){
-    m_datapool = &CDataPool::getInstance();
-    // create object
-    MyThread *thread = new MyThread;
-    //ogreMain();
-    // start the thread
-    thread->startThread(true, false);    // blocking, non verbose    
-
-    ofSetLogLevel(OF_LOG_VERBOSE);
-    openNIDevice.setup();//FromXML("openni/config/ofxopenni_config.xml");
-    openNIDevice.addImageGenerator();
-    openNIDevice.addDepthGenerator();
-    openNIDevice.setRegister(true);
-    openNIDevice.setMirror(true);
-    openNIDevice.addUserGenerator();
-    openNIDevice.setLogLevel(OF_LOG_VERBOSE);
-    openNIDevice.getWidth();
-
-    openNIDevice.setMaxNumUsers(2);
-    openNIDevice.setUsePointCloudsAllUsers(true);
-    openNIDevice.start();
+    // Create application object
+    TutorialApplication app;
+    try {
+        app.go();
+    } catch( Ogre::Exception& e ) {
+        std::cerr << "An exception has occured: " <<
+            e.getFullDescription().c_str() << std::endl;
+    }
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
-    openNIDevice.update();
+
 }
 
 //--------------------------------------------------------------
 void testApp::draw(){
-
-    string msg = "Num of Users Tracked: " + ofToString(openNIDevice.getNumTrackedUsers());
-    static string m_pm;
-    int numUsers = openNIDevice.getNumTrackedUsers();
-    if (numUsers) {
-        for (int i = 0; i < numUsers; i++) {
-            ofxOpenNIUser & user = openNIDevice.getTrackedUser(i);
-            if (user.isTracking()) {
-                //Get Left and right hand posisitons
-                ofPoint rhp = openNIDevice.getTrackedUser(i).getJoint(JOINT_RIGHT_HAND).getWorldPosition();                
-                //cout<< "x:" << rhp.x << endl;
-                if ( rhp.x < -100)
-                {
-                    m_pm = "Wireframe";
-                    m_datapool->createRef("pm", (void *)&m_pm);
-                }else if ( rhp.x > 100)
-                {
-                    m_pm = "Points";
-                    m_datapool->createRef("pm", (void *)&m_pm);
-                }else{
-                    m_pm = "Solid";
-                    m_datapool->createRef("pm", (void *)&m_pm);
-                }                              
-            }
-        }
-
-    }
 }
 
 //--------------------------------------------------------------

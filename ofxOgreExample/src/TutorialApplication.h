@@ -16,27 +16,20 @@ This source file is part of the
 */
 #ifndef __TutorialApplication_h_
 #define __TutorialApplication_h_
+#undef PI
+#undef TWO_PI
+#undef HALF_PI
 
 #include "BaseApplication.h"
-#include "ofThread.h"
-#include "ofMain.h"
-#include "DataPool.h"
 
-int ogreMain();
-
-class TutorialApplication : public BaseApplication, public ofThread
+class TutorialApplication : public BaseApplication
 {
 public:
     TutorialApplication(void);
     virtual ~TutorialApplication(void);
 
-    void threadedFunction(){
-        eventLoop();
-    }
 protected:
-    void eventLoop();
     virtual void createScene(void);
-    DataPool::CDataPool *m_datapool;
 };
 
 #endif // #ifndef __TutorialApplication_h_

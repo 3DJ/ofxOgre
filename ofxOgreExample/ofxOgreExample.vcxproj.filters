@@ -13,22 +13,10 @@
     <ClCompile Include="src\TutorialApplication.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxOpenNI\src\ofxOpenNI.cpp">
-      <Filter>openNI</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxOpenNI\src\ofxOpenNITypes.cpp">
-      <Filter>openNI</Filter>
-    </ClCompile>
-    <ClCompile Include="src\DataPool.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
       <UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="openNI">
-      <UniqueIdentifier>{1afe013a-914e-4bae-9e3d-ad3295e875f9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -39,9 +27,6 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\TutorialApplication.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\DataPool.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
