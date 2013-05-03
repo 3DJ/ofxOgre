@@ -106,8 +106,8 @@ copy "$(ProjectDir)..\..\..\addons\ofxOgre\bin\win\$(Configuration)\*.*" "$(Proj
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\BaseApplication.cpp" />
-    <ClCompile Include="..\src\TutorialApplication.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxOgre\src\BaseApplication.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxOgre\src\TutorialApplication.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\testApp.cpp" />
   </ItemGroup>
