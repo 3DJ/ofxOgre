@@ -7,26 +7,23 @@
     <ClCompile Include="src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\BaseApplication.cpp">
-      <Filter>src</Filter>
+    <ClCompile Include="..\..\..\addons\ofxOgre\src\BaseApplication.cpp">
+      <Filter>ofxOgre</Filter>
     </ClCompile>
-    <ClCompile Include="src\TutorialApplication.cpp">
-      <Filter>src</Filter>
+    <ClCompile Include="..\..\..\addons\ofxOgre\src\TutorialApplication.cpp">
+      <Filter>ofxOgre</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
       <UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ofxOgre">
+      <UniqueIdentifier>{d6073215-fb7b-4243-8d63-d848eff64bb5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\testApp.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\BaseApplication.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\TutorialApplication.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

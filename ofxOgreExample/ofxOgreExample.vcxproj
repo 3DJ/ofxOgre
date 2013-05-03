@@ -57,7 +57,7 @@
       <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <AdditionalIncludeDirectories>..\..\..\addons\ofxOgre\boost;..\..\..\addons\ofxOgre\include;..\..\..\addons\ofxOgre\include\COMMON\include;..\..\..\addons\ofxOgre\include\OGRE;..\..\..\addons\ofxOgre\include\OIS;%(AdditionalIncludeDirectories);src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\addons\ofxOgre\src;..\..\..\addons\ofxOgre\boost;..\..\..\addons\ofxOgre\include;..\..\..\addons\ofxOgre\include\COMMON\include;..\..\..\addons\ofxOgre\include\OGRE;..\..\..\addons\ofxOgre\include\OIS;%(AdditionalIncludeDirectories);src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
@@ -84,7 +84,7 @@ copy "$(ProjectDir)..\..\..\addons\ofxOgre\bin\win\$(Configuration)\*.*" "$(Proj
       <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat />
-      <AdditionalIncludeDirectories>..\..\..\addons\ofxOgre\boost;..\..\..\addons\ofxOgre\include;..\..\..\addons\ofxOgre\include\COMMON\include;..\..\..\addons\ofxOgre\include\OGRE;..\..\..\addons\ofxOgre\include\OIS;%(AdditionalIncludeDirectories);src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\addons\ofxOgre\src;..\..\..\addons\ofxOgre\boost;..\..\..\addons\ofxOgre\include;..\..\..\addons\ofxOgre\include\COMMON\include;..\..\..\addons\ofxOgre\include\OGRE;..\..\..\addons\ofxOgre\include\OIS;%(AdditionalIncludeDirectories);src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
@@ -106,15 +106,13 @@ copy "$(ProjectDir)..\..\..\addons\ofxOgre\bin\win\$(Configuration)\*.*" "$(Proj
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\BaseApplication.cpp" />
+    <ClCompile Include="..\src\BaseApplication.cpp" />
+    <ClCompile Include="..\src\TutorialApplication.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\testApp.cpp" />
-    <ClCompile Include="src\TutorialApplication.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\BaseApplication.h" />
     <ClInclude Include="src\testApp.h" />
-    <ClInclude Include="src\TutorialApplication.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\libs\openFrameworksCompiled\project\vs2010\openframeworksLib.vcxproj">
