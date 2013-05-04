@@ -4,6 +4,8 @@ openframeworks addons for ogre.
 
 ofxOgre lets ogre work in openframeworks.
 
+This branch is for working ofxOgre with ofxOpenNI. So you need to put ofxOpenNI in your addons to use this.
+
 *******
 1. You don't need to download the ogre sdk on windows, but you need to install ogre on linux for running ofxOgre.
 2. cfg has the default cfg file from ogre sdk. Copy it to your "bin" folder for initializing ogre if you don't have your own ogre cfg file.
