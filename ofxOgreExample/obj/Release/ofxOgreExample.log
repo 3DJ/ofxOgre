@@ -1,0 +1,48 @@
+﻿Build started 2013/5/3 22:53:52.
+     1>Project "E:\3-dj\of_v0073_vs2010_release\of_v0073_vs2010_release\addons\ofxOgre\ofxOgreExample\ofxOgreExample.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "obj\Release\ofxOgreExample.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+       Link:
+         All outputs are up-to-date.
+         ofxOgreExample.vcxproj -> E:\3-dj\of_v0073_vs2010_release\of_v0073_vs2010_release\addons\ofxOgre\ofxOgreExample\bin\ofxOgreExample.exe
+       PostBuildEvent:
+         Description: adding DLLs and creating data folder
+         xcopy /e /i /y "E:\3-dj\of_v0073_vs2010_release\of_v0073_vs2010_release\addons\ofxOgre\ofxOgreExample\..\..\..\export\vs2010\*.dll" "E:\3-dj\of_v0073_vs2010_release\of_v0073_vs2010_release\addons\ofxOgre\ofxOgreExample\bin"
+         copy "E:\3-dj\of_v0073_vs2010_release\of_v0073_vs2010_release\addons\ofxOgre\ofxOgreExample\..\..\..\addons\ofxOgre\bin\win\Release\*.*" "E:\3-dj\of_v0073_vs2010_release\of_v0073_vs2010_release\addons\ofxOgre\ofxOgreExample\bin"
+         :VCEnd
+         E:\3-dj\of_v0073_vs2010_release\of_v0073_vs2010_release\addons\ofxOgre\ofxOgreExample\..\..\..\export\vs2010\Assimp32.dll
+         E:\3-dj\of_v0073_vs2010_release\of_v0073_vs2010_release\addons\ofxOgre\ofxOgreExample\..\..\..\export\vs2010\fmodex.dll
+         E:\3-dj\of_v0073_vs2010_release\of_v0073_vs2010_release\addons\ofxOgre\ofxOgreExample\..\..\..\export\vs2010\fmodexL.dll
+         E:\3-dj\of_v0073_vs2010_release\of_v0073_vs2010_release\addons\ofxOgre\ofxOgreExample\..\..\..\export\vs2010\FreeImage.dll
+         E:\3-dj\of_v0073_vs2010_release\of_v0073_vs2010_release\addons\ofxOgre\ofxOgreExample\..\..\..\export\vs2010\FreeType-6.dll
+         E:\3-dj\of_v0073_vs2010_release\of_v0073_vs2010_release\addons\ofxOgre\ofxOgreExample\..\..\..\export\vs2010\glut32.dll
+         E:\3-dj\of_v0073_vs2010_release\of_v0073_vs2010_release\addons\ofxOgre\ofxOgreExample\..\..\..\export\vs2010\Zlib.dll
+         复制了 7 个文件
+         E:\3-dj\of_v0073_vs2010_release\of_v0073_vs2010_release\addons\ofxOgre\ofxOgreExample\..\..\..\addons\ofxOgre\bin\win\Release\cg.dll
+         E:\3-dj\of_v0073_vs2010_release\of_v0073_vs2010_release\addons\ofxOgre\ofxOgreExample\..\..\..\addons\ofxOgre\bin\win\Release\OgreMain.dll
+         E:\3-dj\of_v0073_vs2010_release\of_v0073_vs2010_release\addons\ofxOgre\ofxOgreExample\..\..\..\addons\ofxOgre\bin\win\Release\OgreMeshUpgrader.exe
+         E:\3-dj\of_v0073_vs2010_release\of_v0073_vs2010_release\addons\ofxOgre\ofxOgreExample\..\..\..\addons\ofxOgre\bin\win\Release\OgrePaging.dll
+         E:\3-dj\of_v0073_vs2010_release\of_v0073_vs2010_release\addons\ofxOgre\ofxOgreExample\..\..\..\addons\ofxOgre\bin\win\Release\OgreProperty.dll
+         E:\3-dj\of_v0073_vs2010_release\of_v0073_vs2010_release\addons\ofxOgre\ofxOgreExample\..\..\..\addons\ofxOgre\bin\win\Release\OgreRTShaderSystem.dll
+         E:\3-dj\of_v0073_vs2010_release\of_v0073_vs2010_release\addons\ofxOgre\ofxOgreExample\..\..\..\addons\ofxOgre\bin\win\Release\OgreTerrain.dll
+         E:\3-dj\of_v0073_vs2010_release\of_v0073_vs2010_release\addons\ofxOgre\ofxOgreExample\..\..\..\addons\ofxOgre\bin\win\Release\OgreXMLConverter.exe
+         E:\3-dj\of_v0073_vs2010_release\of_v0073_vs2010_release\addons\ofxOgre\ofxOgreExample\..\..\..\addons\ofxOgre\bin\win\Release\OIS.dll
+         E:\3-dj\of_v0073_vs2010_release\of_v0073_vs2010_release\addons\ofxOgre\ofxOgreExample\..\..\..\addons\ofxOgre\bin\win\Release\Plugin_BSPSceneManager.dll
+         E:\3-dj\of_v0073_vs2010_release\of_v0073_vs2010_release\addons\ofxOgre\ofxOgreExample\..\..\..\addons\ofxOgre\bin\win\Release\Plugin_CgProgramManager.dll
+         E:\3-dj\of_v0073_vs2010_release\of_v0073_vs2010_release\addons\ofxOgre\ofxOgreExample\..\..\..\addons\ofxOgre\bin\win\Release\Plugin_OctreeSceneManager.dll
+         E:\3-dj\of_v0073_vs2010_release\of_v0073_vs2010_release\addons\ofxOgre\ofxOgreExample\..\..\..\addons\ofxOgre\bin\win\Release\Plugin_OctreeZone.dll
+         E:\3-dj\of_v0073_vs2010_release\of_v0073_vs2010_release\addons\ofxOgre\ofxOgreExample\..\..\..\addons\ofxOgre\bin\win\Release\Plugin_ParticleFX.dll
+         E:\3-dj\of_v0073_vs2010_release\of_v0073_vs2010_release\addons\ofxOgre\ofxOgreExample\..\..\..\addons\ofxOgre\bin\win\Release\Plugin_PCZSceneManager.dll
+         E:\3-dj\of_v0073_vs2010_release\of_v0073_vs2010_release\addons\ofxOgre\ofxOgreExample\..\..\..\addons\ofxOgre\bin\win\Release\RenderSystem_Direct3D9.dll
+         E:\3-dj\of_v0073_vs2010_release\of_v0073_vs2010_release\addons\ofxOgre\ofxOgreExample\..\..\..\addons\ofxOgre\bin\win\Release\RenderSystem_GL.dll
+         已复制        17 个文件。
+       FinalizeBuildStatus:
+         Deleting file "obj\Release\ofxOgreExample.unsuccessfulbuild".
+         Touching "obj\Release\ofxOgreExample.lastbuildstate".
+     1>Done Building Project "E:\3-dj\of_v0073_vs2010_release\of_v0073_vs2010_release\addons\ofxOgre\ofxOgreExample\ofxOgreExample.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.04

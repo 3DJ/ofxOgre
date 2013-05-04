@@ -7,23 +7,41 @@
     <ClCompile Include="src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxOgre\src\BaseApplication.cpp">
-      <Filter>ofxOgre</Filter>
+    <ClCompile Include="src\BaseApplication.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxOgre\src\TutorialApplication.cpp">
-      <Filter>ofxOgre</Filter>
+    <ClCompile Include="src\TutorialApplication.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxOpenNI\src\ofxOpenNI.cpp">
+      <Filter>openNI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxOpenNI\src\ofxOpenNITypes.cpp">
+      <Filter>openNI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DataPool.cpp">
+      <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
       <UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ofxOgre">
-      <UniqueIdentifier>{d6073215-fb7b-4243-8d63-d848eff64bb5}</UniqueIdentifier>
+    <Filter Include="openNI">
+      <UniqueIdentifier>{1afe013a-914e-4bae-9e3d-ad3295e875f9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\testApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BaseApplication.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TutorialApplication.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DataPool.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

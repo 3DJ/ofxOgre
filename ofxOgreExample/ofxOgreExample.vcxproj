@@ -57,7 +57,7 @@
       <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <AdditionalIncludeDirectories>..\..\..\addons\ofxOgre\src;..\..\..\addons\ofxOgre\boost;..\..\..\addons\ofxOgre\include;..\..\..\addons\ofxOgre\include\COMMON\include;..\..\..\addons\ofxOgre\include\OGRE;..\..\..\addons\ofxOgre\include\OIS;%(AdditionalIncludeDirectories);src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\addons\ofxOpenNI\include\nite;..\..\..\addons\ofxOpenNI\include\openni;..\..\..\addons\ofxOpenNI\src;..\..\..\addons\ofxOgre\boost;..\..\..\addons\ofxOgre\include;..\..\..\addons\ofxOgre\include\COMMON\include;..\..\..\addons\ofxOgre\include\OGRE;..\..\..\addons\ofxOgre\include\OIS;%(AdditionalIncludeDirectories);src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
@@ -67,7 +67,7 @@
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention />
       <TargetMachine>MachineX86</TargetMachine>
-      <AdditionalDependencies>OgreMain_d.lib;OIS_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>OgreMain_d.lib;OIS_d.lib;bin\data\openni\lib\openNI.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\..\..\addons\ofxOgre\boost\lib;..\..\..\addons\ofxOgre\lib\win\opt;..\..\..\addons\ofxOgre\lib\win;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent />
@@ -84,7 +84,7 @@ copy "$(ProjectDir)..\..\..\addons\ofxOgre\bin\win\$(Configuration)\*.*" "$(Proj
       <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat />
-      <AdditionalIncludeDirectories>..\..\..\addons\ofxOgre\src;..\..\..\addons\ofxOgre\boost;..\..\..\addons\ofxOgre\include;..\..\..\addons\ofxOgre\include\COMMON\include;..\..\..\addons\ofxOgre\include\OGRE;..\..\..\addons\ofxOgre\include\OIS;%(AdditionalIncludeDirectories);src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\addons\ofxOpenNI\include\libusb;..\..\..\addons\ofxOpenNI\include\nite;..\..\..\addons\ofxOpenNI\include\openni;..\..\..\addons\ofxOpenNI\src;..\..\..\addons\ofxOgre\boost;..\..\..\addons\ofxOgre\include;..\..\..\addons\ofxOgre\include\COMMON\include;..\..\..\addons\ofxOgre\include\OGRE;..\..\..\addons\ofxOgre\include\OIS;%(AdditionalIncludeDirectories);src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
@@ -96,7 +96,7 @@ copy "$(ProjectDir)..\..\..\addons\ofxOgre\bin\win\$(Configuration)\*.*" "$(Proj
       <DataExecutionPrevention />
       <TargetMachine>MachineX86</TargetMachine>
       <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
-      <AdditionalDependencies>OgreMain.lib;OIS.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>bin\data\openni\lib\openNI.lib;OgreMain.lib;OIS.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\..\..\addons\ofxOgre\boost\lib;..\..\..\addons\ofxOgre\lib\win\opt;..\..\..\addons\ofxOgre\lib\win;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent />
@@ -106,13 +106,19 @@ copy "$(ProjectDir)..\..\..\addons\ofxOgre\bin\win\$(Configuration)\*.*" "$(Proj
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\addons\ofxOgre\src\BaseApplication.cpp" />
-    <ClCompile Include="..\..\..\addons\ofxOgre\src\TutorialApplication.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxOpenNI\src\ofxOpenNI.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxOpenNI\src\ofxOpenNITypes.cpp" />
+    <ClCompile Include="src\BaseApplication.cpp" />
+    <ClCompile Include="src\DataPool.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\testApp.cpp" />
+    <ClCompile Include="src\TutorialApplication.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\BaseApplication.h" />
+    <ClInclude Include="src\DataPool.h" />
     <ClInclude Include="src\testApp.h" />
+    <ClInclude Include="src\TutorialApplication.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\libs\openFrameworksCompiled\project\vs2010\openframeworksLib.vcxproj">
