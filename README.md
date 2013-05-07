@@ -2,7 +2,7 @@ ofxOgre
 =======
 openframeworks addons for ogre.
 
-ofxOgre lets ogre work in openframeworks.
+ofxOgre lets ogre work in openframeworks 0073.
 
 *******
 1. You don't need to download the ogre sdk on windows, but you need to install ogre on linux for running ofxOgre.
