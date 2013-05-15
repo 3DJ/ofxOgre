@@ -1,6 +1,5 @@
-#include "testApp.h"
-
 #include "TutorialApplication.h"
+#include "testApp.h"
 
 //--------------------------------------------------------------
 void testApp::setup(){

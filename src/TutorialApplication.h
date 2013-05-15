@@ -16,9 +16,6 @@ This source file is part of the
 */
 #ifndef __TutorialApplication_h_
 #define __TutorialApplication_h_
-#undef PI
-#undef TWO_PI
-#undef HALF_PI
 
 #include "BaseApplication.h"
 
