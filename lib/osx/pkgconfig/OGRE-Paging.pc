@@ -1,0 +1,11 @@
+prefix=$(SRCROOT)
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: OGRE-Paging
+Description: General purpose paging component for OGRE
+Version: 1.8.0
+Requires: OGRE = 1.8.0
+Libs: -L${libdir} -lOgrePaging
+Cflags: -I${includedir}/OGRE/Paging -pthread
