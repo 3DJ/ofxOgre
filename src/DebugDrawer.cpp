@@ -220,7 +220,7 @@ DebugDrawer* DebugDrawer::getSingletonPtr(void)
  
 DebugDrawer& DebugDrawer::getSingleton(void)
 {  
-    assert( ms_Singleton );  return ( *msSingleton );  
+    assert( msSingleton );  return ( *msSingleton );  
 }
 
 
