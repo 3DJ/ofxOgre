@@ -26,6 +26,8 @@ public:
     virtual ~TutorialApplication(void);
 
 protected:
+    bool frameStarted(const Ogre::FrameEvent& evt);
+    bool frameEnded(const Ogre::FrameEvent& evt);
     virtual void createScene(void);
 };
 

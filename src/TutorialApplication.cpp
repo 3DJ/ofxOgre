@@ -15,6 +15,7 @@ http://www.ogre3d.org/tikiwiki/
 -----------------------------------------------------------------------------
 */
 #include "TutorialApplication.h"
+#include "DebugDrawer.h"
 
 //-------------------------------------------------------------------------------------
 TutorialApplication::TutorialApplication(void)
@@ -31,14 +32,16 @@ void TutorialApplication::createScene(void)
 {
     float scale1 = 0.11;
     float scale2 = 0.1;
-
+    Ogre::AxisAlignedBox b;
+    Ogre::AxisAlignedBox box; 
+    
     mSceneMgr->setAmbientLight(Ogre::ColourValue(0.5f, 0.5f, 0.5f));
     Ogre::Entity* a1 = mSceneMgr->createEntity("a1", "cube.mesh");
     Ogre::SceneNode* aNode1 = mSceneMgr->getRootSceneNode()->createChildSceneNode("aNode1");
     aNode1->attachObject(a1);
     aNode1->scale(scale2, scale2, scale2);
     aNode1->setPosition(-30,20,0);
-    aNode1->yaw( Ogre::Degree( 20 ) );
+    aNode1->yaw( Ogre::Degree( 20 ) );    
 
     Ogre::Entity* a2 = mSceneMgr->createEntity( "a2", "cube.mesh" );
     Ogre::SceneNode* aNode2 = mSceneMgr->getRootSceneNode()->createChildSceneNode( "aNode2" );
@@ -116,4 +119,14 @@ void TutorialApplication::createScene(void)
     cNode4->scale(scale2, scale2, scale2);
     cNode4->setPosition(30, -20,0);
     cNode4->yaw( Ogre::Degree( -20 ) );
+}
+
+bool TutorialApplication::frameStarted(const Ogre::FrameEvent& evt)
+{
+    return true;
+}
+
+bool TutorialApplication::frameEnded(const Ogre::FrameEvent& evt)
+{
+    return true;
 }

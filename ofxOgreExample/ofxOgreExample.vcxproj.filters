@@ -13,6 +13,9 @@
     <ClCompile Include="..\..\..\addons\ofxOgre\src\TutorialApplication.cpp">
       <Filter>ofxOgre</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\DebugDrawer.cpp">
+      <Filter>ofxOgre</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -25,6 +28,15 @@
   <ItemGroup>
     <ClInclude Include="src\testApp.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\BaseApplication.h">
+      <Filter>ofxOgre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DebugDrawer.h">
+      <Filter>ofxOgre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\TutorialApplication.h">
+      <Filter>ofxOgre</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
